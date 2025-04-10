@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 
@@ -11,7 +12,11 @@ export default function UserInput({ onSubmit }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
-      onSubmit(input.trim());
+      const sanitizedUsername = input
+        .trim()
+        .replace('https://github.com/', '')
+        .replace(/\/$/, ''); // remove trailing slash if present
+      onSubmit(sanitizedUsername);
     }
   };
 

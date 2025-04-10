@@ -5,7 +5,8 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-     "baseUrl": ".",
+
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -26,3 +27,4 @@
   },
   "include": ["vite.config.ts"]
 }
+

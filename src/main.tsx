@@ -13,4 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </NextThemesProvider>
     </BrowserRouter>
   </React.StrictMode>
+
 );
+
