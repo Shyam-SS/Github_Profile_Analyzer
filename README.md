@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+#  GitHub User Profile Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web app that analyzes any GitHub user's public profile and displays key insights like their top repositories, stars, forks, and recent activity — built with React, TypeScript, and ShadCN
 
-Currently, two official plugins are available:
+##  Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[ Live Demo](https://github-analyzer-plum.vercel.app/)  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+##  Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend Framework:** React + TypeScript + Vite  
+- **UI Components:** ShadCN (Radix UI + TailwindCSS)  
+- **Data Visualization:** Recharts  
+- **Routing:** react-router-dom  
+- **API Handling:** Axios  
+- **State Management:** React Hooks (useState, useEffect)  
+- **Features:** Skeleton Loaders, Error Handling
+
+
+##  Features
+
+-  Search any public GitHub username
+-  Display public repositories with stars, forks, and links
+-  Visualize commit activity with a Recharts line chart
+-  Skeleton loaders while data is fetched
+-  Graceful error handling for invalid usernames
+
+
+##  Getting Started
+
+To run the app locally on your machine:
+
+```bash
+# Clone the repository
+git clone https://github.com/Shyam-SS/Github_Profile_Analyzer
+
+# Move into the project directory
+cd github-profile-analyzer
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will be running at `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+##  Deployment Instructions
+
+You can deploy this project on **Vercel** in two ways:
+
+###  Option 1: Using Vercel Web Interface
+
+1. Push your code to a GitHub repository  
+2. Go to [Vercel](https://vercel.com) and log in  
+3. Click on **"Add New Project"** and import your GitHub repository  
+4. Set the framework preset to **Vite** (auto-detect works too)  
+5. Click **Deploy** — you're live in seconds!
+
+###  Option 2: Deploy via Terminal (Bash)
+
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Run this in your project directory
+dcd github-profile-analyzer
+
+# Deploy the project
+vercel
 ```
+
+- You'll be prompted to log in and link your project.
+- Accept the defaults or customize if needed.
+- Vercel will build and deploy your app, then give you a live URL.
+
+To redeploy after changes:
+```bash
+vercel --prod
+```
+
+##  About Me
+
+**Shyam Sunder Singh**  
+Frontend & AI-ML Intern  
+ [LinkedIn](https://www.linkedin.com/in/shyam-sunder-singh)  
+ [GitHub](https://github.com/Shyam-SS)
+
